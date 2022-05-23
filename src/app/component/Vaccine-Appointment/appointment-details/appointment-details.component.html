@@ -1,0 +1,30 @@
+<h2>Appointment Details</h2> 
+
+<hr/>
+<div *ngIf="appointment">
+  <div>
+    <label><b>Booking Id: </b></label> {{appointment.bookingId}}
+  </div>
+
+  <div>
+    <label><b>Mobile Number: </b></label> {{appointment.mobileNo}}
+  </div>
+  
+  <div>
+    <label><b>Date of Booking: </b></label> {{appointment.dateOfBooking}}
+  </div> 
+
+  <!-- <div>
+    <label><b>Slot: </b></label> {{appointment.slot}}
+  </div>  -->
+
+  <div>
+    <label><b>Center Code: </b></label> {{appointment.centerCode}}
+  </div>
+
+  <div>
+    <label><b>Member IdCard: </b></label> {{appointment.memberIdCard}}
+  </div>
+</div>
+<p></p>
+<button (click)="list()" class="btn btn-primary">Back to Appointment List</button>

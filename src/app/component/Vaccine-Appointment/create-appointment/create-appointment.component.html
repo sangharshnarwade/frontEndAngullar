@@ -1,0 +1,53 @@
+<h3>Add Appointment</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Mobile Number</label>
+      <input type="text" class="form-control" #mobileNo = "ngModel" pattern="^[7-9][0-9]{9}$" id="mobileNo"  required [(ngModel)]="appointment.mobileNo" name="mobileNo" placeholder="Enter your 10 digit mobile number here"
+      minlength="10" maxlength="10">
+    </div>
+    <div *ngIf="mobileNo.errors?.['pattern']" class="required">
+      Only number's are allowed</div>
+
+    <div class="form-group">
+      <label for="name">Date Of Booking</label>
+      <input type="date" class="form-control" id="dateOfBooking" required [(ngModel)]="appointment.dateOfBooking" name="dateOfBooking">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Slot</label>
+        <select   type="text" class="form-control" id="slot" required [(ngModel)]="appointment.slot" name="slot">
+         
+        <option value = "">---select---</option>
+        <option value = "slot1_9_am_to_10_am"> Slot 1: 9 am to 10 am </option>
+        <option value = "slot2_10_am_to_11_am"> Slot 2: 10 am to 11 am </option>
+        <option value = "slot3_11_am_to_12_pm"> Slot 3: 11 am to 12 pm </option> 
+        <option value = "slot4_12_pm_to_1_pm"> Slot 4: 12 pm to 1 pm </option>
+        <option value = "slot5_1_pm_to_2_pm"> Slot 5: 1 pm to 2 pm </option>
+        <option value = "slot6_2_pm_to_3_pm"> Slot 6: 2 pm to 3 pm </option>
+        <option value = "slot7_3_pm_to_4_pm"> Slot 7: 3 pm to 4 pm </option>
+        <option value = "slot8_4_pm_to_5_pm"> Slot 8: 4 pm to 5 pm </option>
+        <option value = "slot9_5_pm_to_6_pm"> Slot 9: 5 pm to 6 pm </option>
+        </select>
+      </div>
+
+
+      <div class="form-group">
+        <label for="name">Center Code</label>
+        <input type="text" class="form-control" id="centerCode" required [(ngModel)]="appointment.centerCode" name="centerCode">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Member IdCard</label>
+        <input type="text" class="form-control" id="memberIdCard" required [(ngModel)]="appointment.memberIdCard" name="memberIdCard">
+      </div>
+
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>Success!</h4>
+</div>

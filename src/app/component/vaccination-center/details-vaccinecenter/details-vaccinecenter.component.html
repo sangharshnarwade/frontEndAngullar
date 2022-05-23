@@ -1,0 +1,26 @@
+<h2>Vaccine Center Details</h2> 
+
+<hr/>
+<div *ngIf="center">
+  <div>
+    <label><b>Center Name: </b></label> {{center.centername}}
+  </div>
+  <div>
+    <label><b>Center Address: </b></label> {{center.address}}
+  </div>
+  <div>
+    <label><b>Center city: </b></label> {{center.city}}
+  </div>
+  <div>
+    <label><b>Center state: </b></label> {{center.state}}
+  </div>
+  <div>
+    <label><b>Center district: </b></label> {{center.district}}
+  </div>
+  <div>
+    <label><b>Center pincode: </b></label> {{center.pincode}}
+  </div> 
+</div>
+<p></p>
+<button (click)="list()" class="btn btn-primary">Back to Vaccine Center List</button>
+

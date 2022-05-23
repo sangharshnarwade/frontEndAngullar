@@ -1,0 +1,20 @@
+<h3>Create Registration</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="Mobile">Mobile No </label>
+      <input type="text" class="form-control" id="Mobile" required [(ngModel)]="registration.mobileNo" name="mobileNo">
+    </div>
+
+    <div class="form-group">
+      <label for="password">password : </label>
+      <input type="password" class="form-control" id="password" required [(ngModel)]="registration.password" name="password">
+    </div>
+    
+    <button type="submit" class="btn btn-success">Sign In</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>Success!</h4>
+</div>

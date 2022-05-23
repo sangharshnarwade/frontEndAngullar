@@ -1,0 +1,40 @@
+<h3>Create Vaccine Center</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Center Name</label>
+      <input type="text" class="form-control" id="centername" required [(ngModel)]="center.centername" name="centername">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Address</label>
+      <input type="text" class="form-control" id="address" required [(ngModel)]="center.address" name="address">
+    </div>
+
+    <div class="form-group">
+      <label for="name">city</label>
+      <input type="text" class="form-control" id="city" required [(ngModel)]="center.city" name="city">
+    </div>
+
+    <div class="form-group">
+      <label for="name">state</label>
+      <input type="text" class="form-control" id="state" required [(ngModel)]="center.state" name="state">
+    </div>
+
+    <div class="form-group">
+      <label for="name">district</label>
+      <input type="text" class="form-control" id="district" required [(ngModel)]="center.district" name="district">
+    </div>
+
+    <div class="form-group">
+      <label for="name">pincode</label>
+      <input type="text" class="form-control" id="pincode" required [(ngModel)]="center.pincode" name="pincode">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>Success!</h4>
+</div>

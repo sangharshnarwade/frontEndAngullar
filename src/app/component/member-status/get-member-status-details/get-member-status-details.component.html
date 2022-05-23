@@ -1,0 +1,30 @@
+<h2>Member Status Details</h2> 
+
+<hr/>
+<div *ngIf="memberStatus">
+  <div>
+    <label><b>dose1status: </b></label> {{memberStatus.dose1status}}
+  </div>
+  <div>
+    <label><b>dose2status: </b></label> {{memberStatus.dose2status}}
+  </div>
+  <div>
+    <label><b>dose1date: </b></label> {{memberStatus.dose1date}}
+  </div>  
+  <div>
+    <label><b>dose2date: </b></label> {{memberStatus.dose2date}}
+  </div>
+  <div>
+    <label><b>mobile registration id: </b></label> {{memberStatus.mobileRegNo}}
+  </div>
+  <div>
+    <label><b>member id card </b></label> {{memberStatus.memberIdCard}}
+  </div>
+  <div>
+    <label><b>vaccine id </b></label> {{memberStatus.vaccineId}}
+  </div>
+</div>
+<p></p>
+<button (click)="list()" class="btn btn-primary">Back to member status list</button>
+
+

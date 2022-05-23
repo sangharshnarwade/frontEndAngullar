@@ -1,0 +1,36 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Appointment List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>bookingId</th>
+            <th>mobileNo</th>
+            <th>dateOfBooking</th>
+            <th>slot</th>
+            <th>memberIdCard</th>
+            <th>centerCode</th>
+           
+            <th>Actions</th>
+
+          </tr>
+        </thead>
+        <tbody>   		
+          <tr *ngFor="let appointment of appointment | async">  
+            <td>{{appointment.bookingId}}</td>
+            <td>{{appointment.mobileNo}}</td>
+            <td>{{appointment.dateOfBooking}}</td> 
+            <td>{{appointment.slot}}</td>
+            <td>{{appointment.memberIdCard}}</td>
+            <td>{{appointment.centerCode}}</td>
+            <td><button (click)="deleteAppointment(appointment.bookingId)" class="btn btn-danger">Delete</button>
+                <button (click)="updateAppointment(appointment.bookingId)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                <button (click)="appointmentDetails(appointment.bookingId)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
