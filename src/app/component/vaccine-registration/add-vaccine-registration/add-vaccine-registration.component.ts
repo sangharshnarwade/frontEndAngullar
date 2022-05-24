@@ -28,7 +28,7 @@ export class AddVaccineRegistrationComponent implements OnInit {
     this.registrationService.addVaccineRegistration(this.registration).subscribe(data => {
       console.log(data)
       this.registration = new VaccineRegistration();
-      this.addMember();
+       this.addMember();
     
     }, 
     error => console.log(error));

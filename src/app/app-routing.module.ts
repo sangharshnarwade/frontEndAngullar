@@ -27,47 +27,47 @@ const routes: Routes = [
 //vaccine registration 
   { path: '', redirectTo: 'user-login', pathMatch: 'full' },
   {path: 'user-login', component: AddVaccineRegistrationComponent},
-
+  
    //member
-
-  //  { path: '', redirectTo: 'member-list', pathMatch: 'full' },
-   {path : 'new-member/:mobileNo' , component : CreateMemberComponent},
+  
+   { path: '', redirectTo: 'member-list', pathMatch: 'full' },
+   {path : 'new-member' , component : CreateMemberComponent},
    {path : 'member-list', component : MemberListComponent},
-   {path : 'update/:id', component : UpdateMemberComponent},
-   {path : 'details/:id', component : MemberDetailsComponent},
+   {path : 'update-member/:id', component : UpdateMemberComponent},
+   {path : 'details-member/:id', component : MemberDetailsComponent},
    
    //member-status
     
-   { path: '', redirectTo: 'member-status-list', pathMatch: 'full'},
-   {path : 'new', component : AddMemberStatusComponent},
+   //{ path: '', redirectTo: 'member-status-list', pathMatch: 'full'},
+   {path : 'new-member-status/:id', component : AddMemberStatusComponent},
    { path: 'member-status-list', component: MemberStatusListComponent },
-   { path: 'update/:id', component: UpdateMemberStatusComponent },
-   { path: 'details/:id', component: GetMemberStatusDetailsComponent},
+   { path: 'update-member-status/:id', component: UpdateMemberStatusComponent },
+   { path: 'details-member-status/:id', component: GetMemberStatusDetailsComponent},
   
    //vaccine routing
 
-  { path: '', redirectTo: 'VaccineDetails', pathMatch: 'full' },
-  { path: 'VaccineDetails', component: VaccineDetailsComponent},
-  { path: 'viewAll', component: VaccineViewComponent},
-  { path: 'add', component: CreateVaccineComponent},
-  { path: 'search/:vaccineName', component: VaccineSearchComponent},
-  { path: 'update/:id', component: UpdateVaccineComponent},
+//  { path: '', redirectTo: 'VaccineDetails', pathMatch: 'full' },
+  { path: 'vaccine-details', component: VaccineDetailsComponent},
+  { path: 'vaccine-view', component: VaccineViewComponent},
+  { path: 'new-vaccine', component: CreateVaccineComponent},
+  { path: 'search-vaccine/:vaccineName', component: VaccineSearchComponent},
+  { path: 'update-vaccine/:id', component: UpdateVaccineComponent},
 
  //vaccine appointment
 
-  // { path: '', redirectTo: 'appointment', pathMatch: 'full' },
+ // { path: '', redirectTo: 'appointment', pathMatch: 'full' },
   { path: 'appointment', component: AppointmentListComponent },
-  { path: 'new', component: CreateAppointmentComponent },
-  { path: 'update/:bookingId', component: CreateAppointmentComponent },
-  { path: 'details/:bookingId', component: AppointmentDetailsComponent },
+  { path: 'new-appointment', component: CreateAppointmentComponent },
+  { path: 'update-appointment/:bookingId', component: CreateAppointmentComponent },
+  { path: 'details-appointment/:bookingId', component: AppointmentDetailsComponent },
   
   //vaccination center 
   
-  // { path: '', redirectTo: 'vaccinecenters', pathMatch: 'full' },
+ // { path: '', redirectTo: 'vaccinecenters', pathMatch: 'full' },
   { path: 'vaccinecenters', component: ListVaccinecenterComponent },
-  { path: 'add', component: CreateVaccinecenterComponent },
-  { path: 'update/:code', component: UpdateVaccinecenterComponent },
-  { path: 'details/:code', component: DetailsVaccinecenterComponent }
+  { path: 'new-vaccine-center', component: CreateVaccinecenterComponent },
+  { path: 'update-vaccine-center/:code', component: UpdateVaccinecenterComponent },
+  { path: 'details-vaccine-center/:code', component: DetailsVaccinecenterComponent }
  
 
 ];

@@ -29,6 +29,7 @@ import { VaccineDetailsComponent } from './component/vaccine/vaccine-details/vac
 import { VaccineSearchComponent } from './component/vaccine/vaccine-search/vaccine-search.component';
 import { VaccineViewComponent } from './component/vaccine/vaccine-view/vaccine-view.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +55,7 @@ import { VaccineViewComponent } from './component/vaccine/vaccine-view/vaccine-v
     CreateAppointmentComponent,
     UpdateAppointmentComponent,
     AddVaccineRegistrationComponent,
-    
+
 
   ],
   imports: [
@@ -62,8 +63,7 @@ import { VaccineViewComponent } from './component/vaccine/vaccine-view/vaccine-v
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
-
+   HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

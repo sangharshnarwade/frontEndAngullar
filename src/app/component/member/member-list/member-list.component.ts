@@ -39,7 +39,9 @@ export class MemberListComponent implements OnInit {
   memberDetails(id: number){
     this.router.navigate(['details', id]);
   }
-
+bookAppointment() {
+  this.router.navigate(['/new-appointment']);
+}
   }
 
 

@@ -1,5 +1,5 @@
 export class  VaccineRegistration { 
-    mobileNo : number = 0;
+    mobileNo! : number;
     password : string = "";
-    memberStatusId : number = 0;
+   
 }
